@@ -1,0 +1,21 @@
+@mixin font($fs, $lh)
+  font-size: $fs
+  line-height: $lh
+
+@mixin box-size($w, $h)
+  width: $w
+  height: $h
+
+// 圖片取代文字
+@mixin logo-change
+  text-indent: 101%
+  overflow: hidden
+  white-space: nowrap
+
+@mixin pad()
+  @media ( max-width: 992px )
+    @content
+
+@mixin mobile()
+  @media ( max-width: 767px )
+    @content

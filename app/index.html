@@ -1,0 +1,574 @@
+---
+title: 後臺設計
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<main>
+
+<!-- assignment -->
+<section class="assignment d-none">
+
+  <nav class="page_navbar p-8
+    d-flex align-items-center justify-content-between"
+  >
+    <div class="d-flex">
+      <h2 class="fs-3 lh-sm me-9">
+        Assignment
+      </h2>
+      <select
+        name="All Courses"
+        class="custom_select pe-8"
+      >
+        <option value="All Courses">
+          All Courses
+        </option>
+      </select>
+    </div>
+
+
+    <div>
+      <a
+        href="#"
+        class="material-icons me-7"
+      >
+        search
+      </a>
+      <a
+        href="#"
+        class="material-icons"
+      >
+        notifications_active
+      </a>
+    </div>
+  </nav>
+
+  <div class="warp">
+    <div class="row ">
+      <aside class="col-12 col-lg-4">
+        <select
+          name="All Courses"
+          class="custom_select pe-8"
+        >
+          <option value="All">
+            All (4)
+          </option>
+        </select>
+
+        <ul class="list-group rounded-1">
+          <li
+            class="list-group-item
+            list-group-item-action
+            bg-light border-gray
+            p-3 cursor_pointer
+            active"
+            aria-current="true"
+          >
+            <div class="row">
+              <div class="col-8 ps-3 pe-0">
+                <h3 class="fs-6 lh-lg mb-1">
+                  Chapter Assignment 2
+                </h3>
+                <h4 class="fs-4 lh-base fw-bold">
+                  Please check this file…
+                </h4>
+              </div>
+
+              <div class="col-4 text-end ">
+                <span class="fs-6 lh-lg text-dark">
+                  4 hrs ago
+                </span>
+                <span class="fs-6 lh-lg text-secondary">
+                  Emily Wang
+                </span>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="list-group-item
+            list-group-item-action
+            border-gray
+            p-3 cursor_pointer
+            aria-current="true"
+          >
+            <div class="row">
+              <div class="col-8 ps-3 pe-0">
+                <h3 class="fs-6 lh-lg mb-1">
+                  Chapter Assignment 1
+                </h3>
+                <h4 class="fs-4 lh-base fw-bold">
+                  My Homework
+                </h4>
+              </div>
+
+              <div class="col-4 text-end ">
+                <span class="fs-6 lh-lg text-dark">
+                  12 hrs ago
+                </span>
+                <span class="fs-6 lh-lg text-secondary">
+                  David Xu
+                </span>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="list-group-item
+            list-group-item-action
+            border-gray
+            p-3 cursor_pointer
+            aria-current="true"
+          >
+            <div class="row">
+              <div class="col-8 ps-3 pe-0">
+                <h3 class="fs-6 lh-lg mb-1">
+                  Final Assignment
+                </h3>
+                <h4 class="fs-4 lh-base fw-bold">
+                  Have a problem with this…
+                </h4>
+              </div>
+
+              <div class="col-4 text-end ">
+                <span class="fs-6 lh-lg text-dark">
+                  18 hrs ago
+                </span>
+                <span class="fs-6 lh-lg text-secondary">
+                  Tony Wei
+                </span>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="list-group-item
+            list-group-item-action
+            border-gray
+            p-3 cursor_pointer"
+            aria-current="true"
+          >
+            <div class="row">
+              <div class="col-8 ps-3 pe-0">
+                <h3 class="fs-6 lh-lg mb-1">
+                  Final Assignment
+                </h3>
+                <h4 class="fs-4 lh-base fw-bold">
+                  Did I do it right?
+                </h4>
+              </div>
+
+              <div class="col-4 text-end ">
+                <span class="fs-6 lh-lg text-dark">
+                  19 hrs ago
+                </span>
+                <span class="fs-6 lh-lg text-secondary">
+                  Christina Lin
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+
+      <section class="col-12 col-lg-8">
+
+        <span
+          class="fs-6 lh-lg text-secondary
+          d-block mb-2 text-end"
+        >
+          2 comments
+        </span>
+
+        <!-- 回報內容 -->
+        <div class="card">
+          <div class="card-header
+            py-3
+            d-flex
+            justify-content-between
+            align-items-center"
+          >
+            <div>
+              <h3 class="fs-6 lh-lg mb-1">
+                Chapter Assignment 2 / HTML&CSS
+              </h3>
+              <h4 class="fs-4 lh-base fw-bold">
+                Please check this file for me, thanks!
+              </h4>
+            </div>
+            
+            <a 
+              href="#"
+              class="material-icons-round"
+            >
+              more_vert
+            </a>
+          </div>
+
+          <ul class="card-body m-0 pt-4 pb-8 ps-4 pe-8">
+            <!-- 發問者 -->
+            <li class="pb-4">
+              <div class="user_card">
+                <img
+                  src="./assets/images/emilywang.jpeg"
+                  alt="登入者頭像"
+                  class="user_img me-4"
+                >
+                <div>
+                  <p class="user_title">
+                    Emily Wang
+                  </p>
+                  <span class="user_text"> 
+                    10:38 AM (4 hours ago)
+                  </span>
+                </div>
+              </div>
+
+              <div class="ms-9 py-4
+                border-bottom border-gray"
+              >
+                <p class="card-text">
+                  Hi Teacher, the attached file is my homework of chapter 2.  And here comes a question: Why in the following code the height of the <mark>div</mark> is bigger than the height of the <mark> img</mark> ? There is a gap below the image, but it doesn’t seems to be a padding/margin.<br>
+                  What is the gap or extra space below image?
+                </p>
+
+                <a
+                  href="#"
+                  class="btn btn-light border-gray
+                    mt-4 py-2 ps-3 pe-4"
+                  download="HW-2-David.zip"
+                >
+                  <span class="fs-4 lh-base fw-bold d-flex">
+                    <i class="material-icons-outlined me-2">
+                      attach_file
+                    </i>
+                    HW-2-David.zip
+                  </span>
+                </a>
+              </div>
+            </li>
+
+            <!-- 回覆者 -->
+            <li class="js_reply_content">
+              <div class="user_card">
+                <img
+                  src="./assets/images/andychen.jpeg"
+                  alt="登入者頭像"
+                  class="user_img me-4"
+                > 
+                <div>
+                  <p class="user_title">
+                    Andy Chen (You)
+                  </p>
+                  <span class="user_text"> 
+                    13:24 AM (1 hours ago)
+                  </span>
+                </div>
+              </div>
+
+              <div class="ms-9 pt-4">
+                <p class="card-text mb-6">
+                  Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                </p>
+
+                <p class="card-text mb-6">
+                  You can:
+                </p>
+
+                <ul class="ms-4">
+                  <li>
+                    • adjust the <mark>vertical-align</mark> of the image to position it elsewhere (e.g. the <mark>middle</mark> ) or
+                  </li>
+                  <li>
+                    • change the <mark>display</mark> so it isn’t inline.
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+
+
+            <!-- 編輯器區塊 -->
+            <li class="js_ckeditor_content
+              position-relative
+              mb-n8 ms-n4 me-n8"
+            >
+              <!-- 按鈕 -->
+              <div class="ckeditor_btns
+                position-absolute
+                mb-4 me-7"
+              >
+                <button class="js_reply_cancel_btn
+                  btn btn-outline-success me-2"
+                >
+                  Cancel
+                </button>
+                <button class="btn btn-success">
+                  Reply
+                </button>
+              </div>
+
+              <!-- 編輯器主體 -->
+              <textarea 
+                id="editor"
+                class="editor mt-3 border-primary"
+              ></textarea>
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div class="js_operation_btns
+          d-flex justify-content-between align-items-center
+          mt-4"
+        >
+          <div>
+            <a href="#">
+              <i class="material-icons-outlined">
+                chevron_left
+              </i>
+            </a>
+            <a href="#">
+              <i class="material-icons-outlined">
+                chevron_right
+              </i>
+            </a>
+          </div>
+          <div>
+            <button class="btn btn-outline-success me-4">
+              Mark as read
+            </button>
+            <button class="js_message_reply_btn
+              btn btn-success"
+            >
+              Reply
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Admin -->
+<section class="admin">
+  <nav class="page_navbar p-8
+    d-flex align-items-center justify-content-between"
+  >
+    <div class="d-flex">
+      <h2 class="fs-3 lh-sm me-9">
+        Admin
+      </h2>
+      
+      <button class="btn
+        fs-4 lh-base p-0 pe-1"
+      >
+        <i class="material-icons-outlined
+          text-success me-2"
+        >
+          add
+        </i>
+        Add New Admin
+      </button>
+    </div>
+
+
+    <div>
+      <a
+        href="#"
+        class="material-icons me-7"
+      >
+        search
+      </a>
+      <a
+        href="#"
+        class="material-icons"
+      >
+        notifications_active
+      </a>
+    </div>
+  </nav>
+
+  <div class="warp pt-4">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">
+            ID
+            <button class="btn link-success p-0 ms-1 fs-6">
+              <i class="material-icons-round">
+                arrow_downward
+              </i>
+            </button>
+          </th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Verified</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="align-middle">
+          <td>#1</td>
+          <td>Emir Wicks</td>
+          <td>emir.wicks@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <button class="btn btn_custom_success p-1 me-7">
+              <i class="material-icons-round">
+                visibility
+              </i>
+            </button>
+            <button class="btn btn_custom_success px-1 py-0">
+              <i class="material-icons-round">
+                edit
+              </i>
+            </button>
+          </td>
+        </tr>
+        <tr class="align-middle">
+          <td>#2</td>
+          <td>Zaina Goldsmith</td>
+          <td>zaina.goldsmith@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <button class="btn btn_custom_success p-1 me-7">
+              <i class="material-icons-round">
+                visibility
+              </i>
+            </button>
+            <button class="btn btn_custom_success px-1 py-0">
+              <i class="material-icons-round">
+                edit
+              </i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav aria-label="navigation">
+      <ul class="pagination justify-content-end m-0">
+        <li class="page-item">
+          <a
+            href="#"
+            class="page-link"
+            aria-label="Previous"
+          >
+            <i class="material-icons-outlined p-0 fs-6 fw-bold">
+              chevron_left
+            </i>
+          </a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a
+          href="#"
+            class="page-link"
+            aria-label="Next"
+          >
+            <i class="material-icons-outlined p-0 fs-6 fw-bold">
+              chevron_right
+            </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+</main>
+
+
+<!-- 詳細資料的 modal -->
+<button type="button" class="btn btn-primary" 
+id="modal123"
+data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 編輯資料的 modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- 新增資料的 modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
