@@ -1,10 +1,188 @@
----
-title: 後臺設計
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<main>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>後臺設計</title>
+
+  <!-- googleIcon -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  >
+
+  <!-- googleIcon - Round  -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+    rel="stylesheet"
+  >
+
+  <!-- googleIcon - outlined -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"
+  >
+
+  <link
+    href="./assets/style/all.css"
+    rel="stylesheet"
+  >
+</head>
+
+<body class="d-flex">
+
+  <header class="header bg-light py-8
+    d-flex flex-column justify-content-between"
+  >
+    <div>
+      <h1 class="logo mb-6 ms-8">
+        <a href="#">
+          ANSWER
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav flex-column">
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="dashboard"
+              class="nav_ladel"
+            >
+            <label
+              for="dashboard"
+              name="Dashboard"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                sports_kabaddi
+              </i>
+              <p>Dashboard</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="question"
+              class="nav_ladel"
+            >
+            <label
+              for="question"
+              name="Question"
+              class="nav-link px-8 py-3 d-flex"
+            >
+            <i class="material-icons-round me-4">
+              exposure_neg_1
+            </i>
+            <p>Question</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="assignment"
+              class="js_assignment_page nav_ladel"
+
+            >
+            <label
+              for="assignment"
+              name="Assignment"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                flutter_dash
+              </i>
+              <p>Assignment</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="course"
+              class="nav_ladel"
+            >
+            <label
+              for="course"
+              name="Course"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                liquor
+              </i>
+              <p>Course</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="admin"
+              class="js_admin_page nav_ladel"
+              checked
+            >
+            <label
+              for="admin"
+              name="Admin"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                switch_access_shortcut_add
+              </i>
+              <p>Admin</p>
+            </label>
+          </li>
+          
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="settings"
+              class="nav_ladel"
+            >
+            <label
+              for="settings"
+              name="Settings"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                wash
+              </i>
+              <p>Settings</p>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="user_card ms-8">
+      <img
+        src="./assets/images/andychen.jpeg"
+        alt="登入者頭像"
+        class="user_img me-4"
+      >
+      <div>
+        <p class="user_title">
+          Andy Chen
+        </p>
+        <span class="user_text">
+          andy0401@mail.com
+        </span>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
 
 <!-- assignment -->
 <section class="assignment d-none">
@@ -572,3 +750,12 @@ data-bs-toggle="modal" data-bs-target="#exampleModal">
   </div>
 </div> -->
 
+
+
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
