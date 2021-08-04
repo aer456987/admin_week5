@@ -1,17 +1,17 @@
 "use strict";
 
-// const { ready } = require("jquery");
 // 文章編輯器
 ClassicEditor.create(document.querySelector('#editor'), {
   placeholder: 'Reply an answer…' // 這裡可以設定 plugin
 
 })["catch"](function (error) {
   console.error(error);
-}); // jquery 操作留言回復
+}); // jquery
 
 $(function () {
-  // $('.admin').fadeOut().addClass('d-none'); // 預設隱藏
-  $('.js_ckeditor_content').hide(); // 頁面切換
+  $('.admin').fadeOut().addClass('d-none'); // 預設隱藏
+
+  $('.js_modal_footer_btns').toggleClass('d-none'); // 頁面切換
   // js_assignment_page
 
   $('.js_assignment_page').on('click', function () {
@@ -34,11 +34,31 @@ $(function () {
     $('.js_reply_content').slideDown();
     $('.js_ckeditor_content').slideUp();
     $('.js_operation_btns').toggleClass('d-none');
+  }); // 打開 modal
+  // 新增資料的 modal
+
+  $('.js_new_admin_btn').on('click', function () {
+    $('.js_new_admin_modal').modal('show');
+  }); // 編輯資料的 modal
+
+  $('.js_edit_admin_btn').on('click', function () {
+    $('.js_edit_admin_modal').modal('show');
+  }); // 詳細資料的 modal
+
+  $('.js_user_admin_btn').on('click', function () {
+    $('.js_user_admin_modal').modal('show');
+    $('.js_open_more_btn').removeClass('change_background_image');
+    $('.js_modal_footer_btns').addClass('d-none');
+  }); // 按鍵展開
+
+  $('.js_open_more_btn').on('click', function () {
+    $('.js_modal_footer_btns').toggleClass('d-none');
+    $('.js_open_more_btn').toggleClass('change_background_image');
+  }); // 從詳細資料開啟 modal
+
+  $('.js_open_edit_modal').on('click', function () {
+    $('.js_edit_admin_modal').modal('show');
+    $('.js_user_admin_modal').modal('hide');
   });
-}); // 詳細資料的 modal
-// var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-// const a = document.querySelector('modal123');
-// myModal.show();
-// 編輯資料的 modal
-// 新增資料的 modal
+});
 //# sourceMappingURL=all.js.map
