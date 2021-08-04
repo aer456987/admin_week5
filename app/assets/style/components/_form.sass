@@ -1,0 +1,39 @@
+// 自訂下拉選單
+.custom_select
+  +font(16px, 1.5)
+  padding: 4px
+  font-weight: 700
+  border: none
+  background: url("../images/icon/arrow.svg") no-repeat scroll right center $white
+  appearance: none // 消除預設箭頭
+  cursor: pointer
+
+
+// 原始表單
+.form-check-label
+  cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    width: 24px
+    height: 24px
+    left: 0
+    border: solid 1px $dark
+    border-radius: 2px
+
+
+.form-check-input
+  display: none
+
+.form-check-input:checked+.form-check-label
+  &::after
+    content: ''
+    position: absolute
+    left: 0px
+    bottom: 10px
+    width: 28px
+    height: 15px
+    border-left: solid 4px $success
+    border-bottom: solid 4px $success
+    border-radius: 3px
+    transform: rotate(-55deg)
