@@ -13,7 +13,8 @@ ClassicEditor
 // jquery
 $(function() {
   $('.admin').fadeOut().addClass('d-none'); // 預設隱藏
-  $('.js_modal_footer_btns').toggleClass('d-none');
+  // $('.js_modal_footer_btns').toggleClass('d-none');
+  $('.js_ckeditor_content').hide();
 
   // 頁面切換
   // js_assignment_page
