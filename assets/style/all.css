@@ -10021,6 +10021,18 @@ mark, .mark {
   height: calc( 100% - 93px);
   padding: 9px 32px 32px; }
 
+.btn-check:focus + .btn, .btn:focus, .btn-close:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.4);
+          box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.4); }
+
+.open_more_btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/arrow_bottom.svg"); }
+
+.change_background_image {
+  background-image: url("../images/icon/arrow_top.svg"); }
+
 .user_card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10100,18 +10112,6 @@ mark, .mark {
   -webkit-transform: rotate(-55deg);
       -ms-transform: rotate(-55deg);
           transform: rotate(-55deg); }
-
-.btn-check:focus + .btn, .btn:focus, .btn-close:focus {
-  -webkit-box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.4);
-          box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.4); }
-
-.open_more_btn {
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/icon/arrow_bottom.svg"); }
-
-.change_background_image {
-  background-image: url("../images/icon/arrow_top.svg"); }
 
 .header {
   width: 296px;
