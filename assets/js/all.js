@@ -6,24 +6,9 @@ ClassicEditor.create(document.querySelector('#editor'), {
 
 })["catch"](function (error) {
   console.error(error);
-}); // jquery
-
+});
 $(function () {
-  $('.admin').fadeOut().addClass('d-none'); // 預設隱藏
-  // $('.js_modal_footer_btns').toggleClass('d-none');
-
-  $('.js_ckeditor_content').hide(); // 頁面切換
-  // js_assignment_page
-
-  $('.js_assignment_page').on('click', function () {
-    $('.assignment').fadeIn().removeClass('d-none');
-    $('.admin').fadeOut().addClass('d-none');
-  }); // js_admin_page
-
-  $('.js_admin_page').on('click', function () {
-    $('.assignment').fadeOut().addClass('d-none');
-    $('.admin').fadeIn().removeClass('d-none');
-  }); // 開啟編輯
+  $('.js_ckeditor_content').hide(); // 開啟編輯
 
   $('.js_message_reply_btn').on('click', function () {
     $('.js_reply_content').slideUp();
@@ -35,8 +20,7 @@ $(function () {
     $('.js_reply_content').slideDown();
     $('.js_ckeditor_content').slideUp();
     $('.js_operation_btns').toggleClass('d-none');
-  }); // 打開 modal
-  // 新增資料的 modal
+  }); // 新增資料的 modal
 
   $('.js_new_admin_btn').on('click', function () {
     $('.js_new_admin_modal').modal('show');

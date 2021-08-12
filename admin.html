@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>後臺設計 - admin</title>
+
+  <!-- googleIcon -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  >
+  <!-- googleIcon - Round  -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+    rel="stylesheet"
+  >
+  <!-- googleIcon - outlined -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"
+  >
+
+  <link
+    href="./assets/style/all.css"
+    rel="stylesheet"
+  >
+</head>
+
+<body class="d-flex">
+
+  <nav class="header bg-light py-8
+    d-flex flex-column justify-content-between"
+  >
+    <div>
+      <h1 class="logo mb-6 ms-8">
+        <a href="#">
+          ANSWER
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav flex-column">
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="dashboard"
+              class="nav_ladel"
+            >
+            <label
+              for="dashboard"
+              name="Dashboard"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                sports_kabaddi
+              </i>
+              <p>Dashboard</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="question"
+              class="nav_ladel"
+            >
+            <label
+              for="question"
+              name="Question"
+              class="nav-link px-8 py-3 d-flex"
+            >
+            <i class="material-icons-round me-4">
+              exposure_neg_1
+            </i>
+            <p>Question</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="assignment"
+              class="js_assignment_page nav_ladel"
+              checked
+            >
+            <label
+              for="assignment"
+              name="Assignment"
+              class="nav-link"
+            >
+              <p class="px-8 py-3 d-flex">
+                <a href="./index.html">
+                  <i class="material-icons-round me-4">
+                    flutter_dash
+                  </i>
+                  Assignment
+                </a>
+              </p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="course"
+              class="nav_ladel"
+            >
+            <label
+              for="course"
+              name="Course"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                liquor
+              </i>
+              <p>Course</p>
+            </label>
+          </li>
+
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="admin"
+              class="js_admin_page nav_ladel"
+            >
+            <label
+              for="admin"
+              name="Admin"
+              class="nav-link"
+            >
+              <p class="px-8 py-3 d-flex">
+                <a href="./admin.html">
+                  <i class="material-icons-round me-4">
+                    switch_access_shortcut_add
+                  </i>
+                  admin
+                </a>
+              </p>
+            </label>
+          </li>
+          
+          <li class="nav-item mx-n8">
+            <input
+              type="radio"
+              name="navbar"
+              id="settings"
+              class="nav_ladel"
+            >
+            <label
+              for="settings"
+              name="Settings"
+              class="nav-link px-8 py-3 d-flex"
+            >
+              <i class="material-icons-round me-4">
+                wash
+              </i>
+              <p>Settings</p>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="user_card ms-8">
+      <img
+        src="./assets/images/andychen.jpeg"
+        alt="登入者頭像"
+        class="user_img me-4"
+      >
+      <div>
+        <p class="user_title">
+          Andy Chen
+        </p>
+        <span class="user_text">
+          andy0401@mail.com
+        </span>
+      </div>
+    </div>
+  </nav>
+
+
+  
+<main>
+  <section class="admin h-100">
+    <nav class="page_navbar p-8
+      d-flex align-items-center justify-content-between"
+    >
+      <div class="d-flex">
+        <h2 class="fs-3 lh-sm me-9">
+          Admin
+        </h2>
+        
+        <button class="js_new_admin_btn btn fs-5 lh-base p-0 pe-1">
+          <i class="material-icons-outlined
+            text-success me-2"
+          >
+            add
+          </i>
+          Add New Admin
+        </button>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="material-icons me-7"
+        >
+          search
+        </a>
+        <a
+          href="#"
+          class="material-icons"
+        >
+          notifications_active
+        </a>
+      </div>
+    </nav>
+  
+    <div class="wrap
+      d-flex flex-column justify-content-between
+      pt-4"
+    >
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">
+              ID
+              <button class="btn link-success p-0 ms-1 fs-7">
+                <i class="material-icons-round">
+                  arrow_downward
+                </i>
+              </button>
+            </th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Verified</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr class="align-middle">
+            <td>#1</td>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#2</td>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#3</td>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#5</td>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#5</td>
+            <td>Annika Mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#5</td>
+            <td>Fatimah Clark</td>
+            <td>fatimah.clark@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#7</td>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#8</td>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#9</td>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.stephenson@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td>#10</td>
+            <td>Annie Smith</td>
+            <td>annie.smith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+              <button
+                class="btn btn_custom_success
+                js_user_admin_btn
+                p-1 me-7"
+              >
+                <i class="material-icons-round">
+                  visibility
+                </i>
+              </button>
+              <button
+                class="btn btn_custom_success
+                js_edit_admin_btn
+                px-1 py-0"
+              >
+                <i class="material-icons-round">
+                  edit
+                </i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <nav aria-label="navigation">
+        <ul class="pagination justify-content-end m-0">
+          <li class="page-item">
+            <a
+              href="#"
+              class="page-link"
+              aria-label="Previous"
+            >
+              <i class="material-icons-outlined p-0 fs-7 fw-bold">
+                chevron_left
+              </i>
+            </a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a
+            href="#"
+              class="page-link"
+              aria-label="Next"
+            >
+              <i class="material-icons-outlined p-0 fs-7 fw-bold">
+                chevron_right
+              </i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+</main>
+
+
+<!-- 新增資料的 modal -->
+<div class="js_new_admin_modal modal fade">
+  <div
+    class="modal-dialog
+      modal-dialog-centered
+      modal-dialog-scrollable"
+  >
+    <div class="modal-content">
+      <div class="modal-header p-8">
+        <h3 class="modal-title fs-3 lh-sm">
+          New Admin
+        </h3>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body py-0 px-8">
+        <!-- Account -->
+        <div class="border-bottom mb-7">
+          <h4 class="fs-4 lh_1 mb-4">Account</h4>
+
+          <form action="index.html">
+            <label
+              for="newUserName"
+              class="form-label lh_2"
+            >
+              Name
+            </label>
+            <input
+              type=text"
+              name="新增使用者名稱"
+              id="newUserName"
+              class="form-control mb-4"
+            >
+
+            <label
+              for="newUserEmail"
+              class="form-label lh_2"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="新增使用者 Email"
+              id="newUserEmail"
+              class="form-control mb-7"
+            >
+
+          </form>
+        </div>
+
+        <!-- Verification -->
+        <div class="border-bottom pb-7 mb-7">
+          <h4 class="fs-4 lh_1 mb-4">Verification</h4>
+          <p class="d-flex mb-5">
+            <i class="material-icons-round text-danger me-2">
+              report_problem
+            </i>
+            Unverified
+          </p>
+
+          <button class="btn btn-outline-success w-100 py-4">
+            Send Verification Mail
+          </button>
+        </div>
+
+        <!-- Access Level -->
+        <div class="border-bottom pb-7 mb-7">
+          <h4 class="fs-4 lh_1 mb-4">Access Level</h4>
+          <select
+            class="form-select"
+            placeholder="-Choose access level-"
+            aria-label="Default select example"
+          >
+            <option selected disabled>-Choose access level-</option>
+            <option value="LV1">Admin</option>
+          </select>
+        </div>
+
+        <!-- Custom Access -->
+        <div class="pb-5">
+          <h4 class="fs-4 lh_1 mb-4">Custom Access</h4>
+          
+          <form action="./index.html">
+            <div
+              class="form-check
+                position-relative mb-4"
+            >
+              <input class="form-check-input"
+                type="checkbox"
+                value="Lecture"
+                id="newLecture"
+              >
+              <label
+                class="form-check-label ms-2"
+                for="newLecture"
+              >
+                Lecture
+              </label>
+            </div>
+
+            <div
+              class="form-check
+                position-relative mb-4"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Coupon"
+                id="newCoupon"
+              >
+              <label
+                class="form-check-label ms-2"
+                for="newCoupon"
+              >
+                Coupon
+              </label>
+            </div>
+
+            <div
+              class="form-check
+                position-relative mb-4"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Message"
+                id="newMessage"
+              >
+              <label
+                class="form-check-label ms-2"
+                for="newMessage"
+              >
+                Message
+              </label>
+            </div>
+
+            <div
+              class="form-check
+                position-relative mb-4"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Setting"
+                id="newSetting"
+              >
+              <label
+                class="form-check-label ms-2"
+                for="newSetting"
+              >
+                Setting
+              </label>
+            </div>
+
+            <div
+              class="form-check
+                position-relative mb-4"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Task Menu"
+                id="newTaskMenu"
+              >
+              <label
+                class="form-check-label ms-2"
+                for="newTaskMenu"
+              >
+                Task Menu
+              </label>
+            </div>
+
+
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Deactivate Account -->
+      <div class="modal-footer py-4 px-8">
+        <button
+          type="button"
+          class="btn btn-outline-success m-0 me-4"
+          data-bs-dismiss="modal"
+        >
+          Deactivate Account
+        </button>
+        <button
+          type="button"
+          class="btn btn-success m-0"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 編輯資料的 modal -->
+<div class="js_edit_admin_modal modal fade">
+  <div
+  class="modal-dialog
+    modal-dialog-centered
+    modal-dialog-scrollable"
+>
+  <div class="modal-content">
+    <div class="modal-header p-8">
+      <h3 class="modal-title fs-3 lh-sm">
+        Edit Admin
+      </h3>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <div class="modal-body py-0 px-8">
+      <!-- Account -->
+      <div class="border-bottom mb-7">
+        <h4 class="fs-4 lh_1 mb-4">Account</h4>
+
+        <form action="index.html">
+          <label
+            for="oldUserName"
+            class="form-label lh_2"
+          >
+            Name
+          </label>
+          <input
+            type=text"
+            name="新增使用者名稱"
+            value="Emir Wicks"
+            id="oldUserName"
+            class="form-control mb-4 border-light"
+            readonly
+          >
+
+          <label
+            for="oldUserEmail"
+            class="form-label lh_2"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            name="新增使用者 Email"
+            value="emir.wicks@mail.com"
+            id="oldUserEmail"
+            class="form-control mb-7 border-light"
+            readonly
+          >
+
+        </form>
+      </div>
+
+      <!-- Verification -->
+      <div class="border-bottom pb-7 mb-7">
+        <h4 class="fs-4 lh_1 mb-4">Verification</h4>
+        <p class="d-flex mb-5">
+          <i class="material-icons-round text-success me-2">
+            check_circle
+          </i>
+          Verified
+          <span class="ms-auto fs-6 lh_2">
+            2020/4/12
+          </span>
+        </p>
+
+        <button
+          class="btn btn-outline-gray w-100 py-4"
+          disabled
+        >
+          Send Verification Mail
+        </button>
+      </div>
+
+      <!-- Access Level -->
+      <div class="border-bottom pb-7 mb-7">
+        <h4 class="fs-4 lh_1 mb-4">Access Level</h4>
+        <select
+          class="form-select"
+          placeholder="-Choose access level-"
+          aria-label="Default select example"
+        >
+          <option selected>Admin</option>
+        </select>
+      </div>
+
+      <!-- Custom Access -->
+      <div class="border-bottom pb-7 mb-7">
+        <h4 class="fs-4 lh_1 mb-4">Custom Access</h4>
+        
+        <form action="./index.html">
+          <div
+            class="form-check
+              position-relative mb-4"
+          >
+            <input class="form-check-input"
+              type="checkbox"
+              value="Lecture"
+              id="Lecture"
+            >
+            <label
+              class="form-check-label ms-2"
+              for="Lecture"
+            >
+              Lecture
+            </label>
+          </div>
+
+          <div
+            class="form-check
+              position-relative mb-4"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Coupon"
+              id="Coupon"
+            >
+            <label
+              class="form-check-label ms-2"
+              for="Coupon"
+            >
+              Coupon
+            </label>
+          </div>
+
+          <div
+            class="form-check
+              position-relative mb-4"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Message"
+              id="Message"
+            >
+            <label
+              class="form-check-label ms-2"
+              for="Message"
+            >
+              Message
+            </label>
+          </div>
+
+          <div
+            class="form-check
+              position-relative mb-4"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Setting"
+              id="Setting"
+            >
+            <label
+              class="form-check-label ms-2"
+              for="Setting"
+            >
+              Setting
+            </label>
+          </div>
+
+          <div
+            class="form-check
+              position-relative mb-4"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Task Menu"
+              id="Task Menu"
+            >
+            <label
+              class="form-check-label ms-2"
+              for="Task Menu"
+            >
+              Task Menu
+            </label>
+          </div>
+
+
+        </form>
+      </div>
+
+      <!-- Deactivate Account -->
+      <div class="mb-8">
+        <h4 class="fs-4 lh_1 mb-4">Deactivate Account</h4>
+        <p class="d-flex mb-5 fw-light text-danger">
+          <i class="material-icons-round text-danger me-2">
+            report_problem
+          </i>
+          This cannot be undone!
+        </p>
+
+        <button class="btn btn-outline-danger w-100 py-4">
+          Deactivate This Account
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-footer py-4 px-8">
+      <button
+        type="button"
+        class="btn btn-outline-success m-0 me-4"
+        data-bs-dismiss="modal"
+      >
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="btn btn-success m-0"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 詳細資料的 modal -->
+<div class="js_user_admin_modal modal fade">
+  <div
+    class="modal-dialog
+      modal-dialog-centered
+      modal-dialog-scrollable"
+  >
+    <div class="modal-content">
+      <div class="modal-body p-8">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 user_img_big me-3">
+            <img
+              src="./assets/images/emir.jpeg"
+              alt="使用者頭像"
+            >
+          </div>
+
+          <div class="flex-grow-1 ms-3">
+            <div class="d-flex mb-2">
+              <span>#1</span>
+              <span class="ms-auto">
+                <button
+                  type="button"
+                  class="btn-close fs-7"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </span>
+            </div>
+
+            <p class="fw-light">Admin</p>
+
+            <h3 class="modal-title mb-4 fs-3 lh-base lh-sm">
+              Emir Wicks
+              <span class="d-block mt-2 fs-6 lh_2 fw-light text-secondary">
+                emir.wicks@mail.com
+              </span>
+            </h3>
+            
+            <div class="d-flex align-items-center">
+              <span class="badge
+                bg-light text-dark
+                fs-6 lh_2 fw-light">
+                Verified
+              </span>
+              <button
+                class="js_open_more_btn
+                open_more_btn
+                btn p-0 ms-auto text-success"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer js_modal_footer_btns pt-0 pb-8 px-8">
+        <button
+          type="button"
+          class="btn btn-outline-danger m-0 me-4"
+          data-bs-dismiss="modal"
+        >
+          Deactivate
+        </button>
+        <button
+          type="button"
+          class="js_open_edit_modal
+          open_edit_modal_btn
+          btn btn-success m-0"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

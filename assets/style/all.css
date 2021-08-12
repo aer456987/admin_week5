@@ -10017,7 +10017,7 @@ mark, .mark {
 .btn_custom_success:hover {
   color: #198754; }
 
-.warp {
+.wrap {
   height: calc( 100% - 93px);
   padding: 9px 32px 32px; }
 
@@ -10115,7 +10115,7 @@ mark, .mark {
 
 .header {
   width: 296px;
-  min-width: 100hv; }
+  min-height: 100vh; }
 
 .logo {
   text-indent: 101%;
@@ -10148,9 +10148,6 @@ mark, .mark {
   .nav_ladel:checked + .nav-link p {
     color: #198754; }
 
-.page_navbar {
-  height: 93px; }
-
 .card-text {
   font-size: 14px;
   line-height: 1.5;
@@ -10170,5 +10167,8 @@ mark, .mark {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+
+.file-download:hover {
+  background-color: #e9ecef; }
 
 /*# sourceMappingURL=all.css.map */
