@@ -10136,7 +10136,7 @@ mark, .mark {
   .nav-link:hover {
     border-color: #198754;
     background: #eff1f4; }
-    .nav-link:hover p {
+    .nav-link:hover a {
       color: #198754; }
 
 .nav_ladel {
@@ -10145,7 +10145,7 @@ mark, .mark {
 .nav_ladel:checked + .nav-link {
   border-color: #198754;
   color: #198754; }
-  .nav_ladel:checked + .nav-link p {
+  .nav_ladel:checked + .nav-link a {
     color: #198754; }
 
 .card-text {
