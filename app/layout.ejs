@@ -87,7 +87,7 @@
               name="navbar"
               id="assignment"
               class="js_assignment_page nav_ladel"
-              checked
+              <%- current == 'Assignment'? 'checked' : '' %> 
             >
             <label
               for="assignment"
@@ -130,6 +130,7 @@
               name="navbar"
               id="admin"
               class="js_admin_page nav_ladel"
+              <%- current == 'admin'? 'checked' : '' %> 
             >
             <label
               for="admin"
